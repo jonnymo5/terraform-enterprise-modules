@@ -19,8 +19,9 @@ is up but failing health checks for more than a few minutes, you'll need to
 ssh to the instance to continue. Jump to [Accessing via SSH](#ssh).
 
 # Accessing via SSH
+Use the username `tfe-admin` when connecting.
 
-One the instance, there are a few elements you'll want to check exist before
+On the instance, there are a few elements you'll want to check exist before
 continuing:
 
 ## `/etc/atlas/boot.env`
@@ -80,5 +81,4 @@ any are pending: `sudo docker exec -ti -u app $(sudo docker ps -q -f name=atlas-
 
 ### Ruby Console
 
-To access the ruby console to be able to type in code, exec: `sudo docker exec -ti -u app $(sudo docker ps -q -f name=atlas-frontend) bash -ic 'cd /home/app/atlas && bin/rails c`
-
+To access the ruby console to be able to type in code, exec: `sudo docker exec -ti -u app $(sudo docker ps -q -f name=atlas-frontend) bash -ic 'cd /home/app/atlas && bin/rails c'`
